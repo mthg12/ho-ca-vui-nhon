@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ cá vui nhộn</title>
+    <link rel="stylesheet" href="/css/mystyle.css">
+</head>
+<body>
+    <div id="aquarium" class="bg">
+        <div id="shark"><img src="/img/shark.png"; width="auto" height="auto"></div>
+        <div id="diver1"><img src="/img/diver1.png"; width="auto" height="auto"></div>
+        <div id="diver2"><img src="/img/diver2.png"; width="auto" height="auto"></div>
+        <div id="diver3"><img src="/img/diver3.png"; width="auto" height="auto"></div>
+        <div id="faint"><img src="/img/faintSchool.png"; width="auto" height="auto"></div>
+        <div id="goldenfish"><img src="/img/goldFishSchool.png"; width="auto" height="auto"></div>
+        <div id="turtle"><img src="/img/turtle.png"; width="auto" height="auto"></div>
+    </div>
+    <audio id="audio">
+        <source src="/audio/愛人錯過 - YouTube.mp3" type="audio/mpeg">
+    </audio>
+    <div>
+        <button id="btn">Phát nhạc</button>
+    </div>
+    <script>
+        const myAudio = document.getElementById("audio");
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", function() {
+            if (audio.paused) {
+                myAudio.play();
+                btn.textContent = "Ngưng";
+            } else {
+                myAudio.pause();
+                btn.textContent = "Phát";
+            }
+        });
+    </script>
+</body>
+</html>

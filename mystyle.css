@@ -1,0 +1,101 @@
+#shark, #turtle, #diver1, #diver2, #diver3, #faint, #goldenfish{
+    position: absolute;
+}
+#aquarium {
+    height: 90vh; 
+    position: relative; 
+    overflow: hidden; 
+    border: 3px solid #0056b3;
+}
+.bg{
+    background: linear-gradient(to bottom, #87CEEB, #1268bd);
+}
+#shark{
+    left: 100px; 
+    top: 400px;
+    animation-name: Shark;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes Shark{
+    0% {left: 100px; top: 400px;}
+    20% {left: 300px; top: 400px;}
+    40% {left: 500px; top: 300px;}
+    50% {left: 600px; top: 50px;}
+    60% {left: 600px; top: 100px;}
+    80% {left: 500px; top: 200px;}
+    100% {left: 100px; top: 400px; transform: scaleX(-1);}
+}
+#turtle{
+    left: -150px;
+    top: 400px;
+    animation-name: TurtleMove;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes TurtleMove{
+    0% {left: -150px; transform: scaleX(1);}
+    50% {left: 100%; transform: scaleX(-1);}
+    100% {left: -150px; transform: scaleX(1);}
+}
+#diver1{
+    left: 20%;
+    top: 60%;
+    animation: Diver1Move 12s linear infinite ;
+}
+
+@keyframes Diver1Move{
+    0%, 100% {top: 60%;}
+    50% {top: 30%;}
+}
+
+#diver2{
+    left: 50%;
+    top: 20%;
+    animation: Diver2Move 15s linear infinite ;
+}
+
+@keyframes Diver2Move{
+    0%, 100% {top: 20%;}
+    50% {top: 70%;}
+}
+
+#diver3{
+    left: 75%;
+    top: 80%;
+    animation: Diver3Move 10s linear infinite ;
+}
+@keyframes Diver3Move{
+    0%, 100% {top: 80%;}
+    50% {top: 50%;}
+}
+#faint{
+    top: 15%;
+    left: 100%;
+    animation: faintmove 20s linear infinite;
+}
+@keyframes faintmove{
+    0% {left: 100%;}
+    100% {left: -50%;}
+}
+#goldenfish{
+    top: 70%;
+    left: -50%;
+    animation: goldenfishmove 25s linear infinite;
+}
+@keyframes goldenfishmove{
+    0% {left: -50%; top: 70%; transform: scaleX(1);}
+    40% {top: 60%;transform: scaleX(1);}
+    50% {left: 100%; top: 55%; transform: scaleX(-1);}
+    90% {top: 65%; transform: scaleX(-1);}
+    100% {left: -50%; transform: scaleX(1);}
+}
+button{
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
